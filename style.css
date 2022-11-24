@@ -14,8 +14,8 @@ body {
     background-color: gainsboro;
     border: 1.5px solid black;
     border-radius: 10px;
-    width: 450px;
-    height: 600px;
+    width: 350px;
+    height: 550px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -23,7 +23,7 @@ body {
 
 .display {
     width: 95%;
-    height: 20%;
+    height: 25%;
     background-color: beige;
     margin-left: auto;
     margin-right: auto;
