@@ -1,13 +1,16 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    background-color: yellow;
 }
 
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
 .container {
     text-align: center;
-    background-color: yellow;
     padding: 100px 0 30px 0;
-
 }
 
 .calculator {
@@ -15,9 +18,10 @@ body {
     border: 1.5px solid black;
     border-radius: 10px;
     width: 350px;
-    height: 550px;
+    height: 490px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 40px;
     padding: 20px;
 }
 
@@ -33,7 +37,7 @@ body {
     display: grid;
     padding: 40px 20px;
     gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .clr,.delete,.btn  {
@@ -49,6 +53,8 @@ body {
 
 .clr,.delete {
     font-size: 20px;
+    padding: 10px;
+    grid-column: span 2;
 }
 
 .delete {
@@ -60,5 +66,9 @@ body {
     color: whitesmoke;
 }
 
-
-
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: green;
+    font-size: 20px;
+}
