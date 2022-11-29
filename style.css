@@ -28,13 +28,12 @@ a {
 
 .display {
     width: 90%;
-    height: 25%;
+    height: 20%;
     background-color: beige;
     margin-left: auto;
     margin-right: auto;
     padding: 9px;
     text-align: right;
-    font-size: 23px;
 }
 
 .buttons-grid {
@@ -44,12 +43,12 @@ a {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.clr,.delete,.btn  {
+.clr,.delete,.btn,.opp  {
     border-radius: 5px;
     border: 1.5px solid black;
 }
 
-.btn {
+.btn,.opp {
     background-color: aquamarine;
     padding: 8px;
     font-size: 25px;
@@ -75,4 +74,14 @@ footer {
     padding: 15px;
     background-color: green;
     font-size: 20px;
+}
+
+.lastOperation {
+    font-size: 18px;
+    height: 40%;
+}
+
+.currentOperation {
+    font-size: 35px;
+    height: 60%;
 }

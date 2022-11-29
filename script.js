@@ -23,3 +23,6 @@ const operate = function(operation, a , b) {
     let result = operation(a,b);
     return result;
 }
+
+const display = document.querySelector(".display");
+let displayValue = "";
