@@ -19,10 +19,13 @@ const divide = function(a, b) {
 
 }
 
+
+/*
 const operate = function(operation, a , b) {
     result = operation(a,b);
     return result;
 }
+*/
 
 const lastOperation = document.getElementById('lastOperation');
 const currentOperation = document.getElementById('currentOperation');
@@ -40,10 +43,12 @@ let b = null;
 Array.from(numBtns).forEach(function(btn) 
 {
     btn.addEventListener('click', () => {
-        displayValue += btn.dataset.value;
-        currentOperation.innerText = displayValue;
-        isEmpty = false;
-        return displayValue;
+        if (displayValue.length < 26) {
+            displayValue += btn.dataset.value;
+            currentOperation.innerText = displayValue;
+            isEmpty = false;
+            return displayValue;
+        }
     });
 });
 

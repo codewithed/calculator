@@ -15,13 +15,11 @@ a {
 }
 
 .calculator {
-    display: flex;
-    flex-direction: column;
     background-color: gainsboro;
     border: 1.5px solid black;
     border-radius: 10px;
     width: 350px;
-    height: 490px;
+    min-height: 450px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
@@ -29,8 +27,11 @@ a {
 }
 
 .display {
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: right;
     width: 90%;
-    height: 20%;
+    min-height: 70px;
     background-color: beige;
     margin-left: auto;
     margin-right: auto;
@@ -79,11 +80,11 @@ footer {
 }
 
 #lastOperation {
+    max-width: 95%;
     font-size: 18px;
-    height: 40%;
 }
 
 #currentOperation {
+    max-width: 95%;
     font-size: 35px;
-    height: 60%;
 }
