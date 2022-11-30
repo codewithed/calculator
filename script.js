@@ -16,16 +16,7 @@ const multiply = function(a, b) {
 const divide = function(a, b) {
     let res = a / b;
     return res;
-
 }
-
-
-/*
-const operate = function(operation, a , b) {
-    result = operation(a,b);
-    return result;
-}
-*/
 
 const lastOperation = document.getElementById('lastOperation');
 const currentOperation = document.getElementById('currentOperation');
@@ -53,7 +44,6 @@ Array.from(numBtns).forEach(function(btn)
 });
 
 Array.from(oppBtns).forEach(function(btn) {
-    
     btn.addEventListener('click', () => {
         if (isEmpty === false && aIsSet === false) {
             operation = btn.dataset.opp;
@@ -88,7 +78,7 @@ equalsBtn.addEventListener('click', () => {
             displayValue = multiply(a,b)
             currentOperation.innerText = displayValue;
         }
-        aIsSet = false; 
+        aIsSet = false;
     }
 });
 
@@ -103,3 +93,16 @@ clrBtn.addEventListener('click', () => {
     bIsSet = false;
     aIsSet = false;
 })
+
+const deleteButton = document.getElementById('delete');
+deleteButton.addEventListener('click', () => {
+    if (displayValue.length > 0) {
+        let displayValueStr = displayValue.toString().slice(0, -1);
+        displayValue = parseInt(displayValueStr);
+        currentOperation.innerText = displayValueStr;
+    }
+    else {
+        displayValue = "";
+        currentOperation.innerText = displayValue;
+    }   
+});
