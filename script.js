@@ -35,10 +35,12 @@ Array.from(numBtns).forEach(function(btn)
 {
     btn.addEventListener('click', () => {
         if (displayValue.length < 26) {
-            displayValue += btn.dataset.value;
+            if (displayValue === NaN)
+                displayValue = btn.dataset.value;
+            else 
+                displayValue += btn.dataset.value;
             currentOperation.innerText = displayValue;
             isEmpty = false;
-            return displayValue;
         }
     });
 });
@@ -96,13 +98,16 @@ clrBtn.addEventListener('click', () => {
 
 const deleteButton = document.getElementById('delete');
 deleteButton.addEventListener('click', () => {
-    if (displayValue.length > 0) {
-        let displayValueStr = displayValue.toString().slice(0, -1);
+    let displayValueStr = displayValue.toString();
+    if (displayValueStr.length > 1 && Number.isInteger(displayValue)) {
+        displayValueStr = displayValueStr.slice(0, -1);
         displayValue = parseInt(displayValueStr);
-        currentOperation.innerText = displayValueStr;
-    }
-    else {
-        displayValue = "";
         currentOperation.innerText = displayValue;
+    }
+    else if (displayValueStr.length === 1 || !Number.isInteger(displayValue)){
+        displayValue = 0;
+        currentOperation.innerText = displayValue;
+        a = null;
+        aIsSet = false;
     }   
 });
